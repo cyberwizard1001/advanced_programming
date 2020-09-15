@@ -22,7 +22,7 @@ class Library{
 
 	public:
 
-	void view_book()
+	void view_book(Library book)
 	{
 		string Author, Title;
 		cout << "Enter author name: ";
@@ -31,8 +31,8 @@ class Library{
 		getline(cin,Title);
 		for(int i=0;i<count;i++)
 		{
-			if((book[i].author==Author)&&(book[i].title==Title))
-				{book_details();break;}
+			if((book.author==Author)&&(book.title==Title))
+				{book_details(book);break;}
 
 
 		}
@@ -40,18 +40,18 @@ class Library{
 		int required=0;
 		cout<<"How many copies of this book is required: ?";
 		cin>>required;
-		cout<<"Total price: "<< book[i].price*required;
+		cout<<"Total price: "<< book.price*required;
 
 
 	}
 
 
-}book[100];
+}books[100],book;
 
 
 int main()
 {
-	Library mainobj;
-	mainobj.view_book();
+	for(int i=0;i<100;i++)
+	book.view_book(books[i]);
 	return 0;
 }

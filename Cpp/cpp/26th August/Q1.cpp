@@ -37,7 +37,7 @@ int main() {
 
   int area = obj.ret_data();
 
-  cout << "Area: " << area << "square units.;
+  cout << "Area: " << area << "square units.";
 
   return 0;
 }
